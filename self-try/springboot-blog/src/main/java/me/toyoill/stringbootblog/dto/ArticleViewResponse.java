@@ -1,17 +1,19 @@
 package me.toyoill.stringbootblog.dto;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import me.toyoill.stringbootblog.domain.Article;
 
 import java.time.LocalDateTime;
 
 @Getter
+@NoArgsConstructor
 public class ArticleViewResponse {
-    private final Long id;
-    private final String title;
-    private final String content;
-    private final LocalDateTime createdAt;
-    private final LocalDateTime updatedAt;
+    private Long id;
+    private String title;
+    private String content;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     public ArticleViewResponse(Article article){
         this.id = article.getId();
